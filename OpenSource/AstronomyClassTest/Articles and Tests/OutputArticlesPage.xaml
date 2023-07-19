@@ -1,0 +1,91 @@
+﻿<Page x:Class="AstronomyClassTest.OutputArticlesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AstronomyClassTest"
+      mc:Ignorable="d" FontSize="20" IsVisibleChanged="Page_IsVisibleChanged"
+      d:DesignHeight="450" d:DesignWidth="500"
+      Title="Класс Астрономии. Главная.">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" HorizontalAlignment="Center">
+            <DockPanel Margin="10">
+                <TextBlock Text="По типу:" Style="{StaticResource MainTextBlockOutputArticlesPage}"/>
+                <ComboBox x:Name="TypeArticleSearch" SelectionChanged="TypeArticleSearch_SelectionChanged" DisplayMemberPath="name_type" Width="150"/>
+            </DockPanel>
+            <DockPanel Margin="10">
+                <TextBlock Text="По названию:" Style="{StaticResource MainTextBlockOutputArticlesPage}"/>
+                <TextBox x:Name="NameArticleSearch" TextChanged="NameArticleSearch_TextChanged" Width="200"/>
+            </DockPanel>
+        </DockPanel>
+        <ListView x:Name="OutputArticleList" Background="Transparent" BorderThickness="0" Grid.Row="1" ScrollViewer.CanContentScroll="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="265">
+                        <DockPanel>
+                            <Image Width="200" Height="200" Margin="30 0 20 0">
+                                <Image.Source>
+                                    <Binding Path="image">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>/Resources/no_image.png</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                            <StackPanel Margin="10">
+                                <TextBlock Text="{Binding name_article}" Style="{StaticResource MainTextBlockForNameArticleSetting}"/>
+                                <TextBlock Text="{Binding description}" Style="{StaticResource MainTextBlockForDescriptionArticleSetting}"/>
+                                <DockPanel>
+                                    <DockPanel Margin="5 0">
+                                        <TextBlock Text="Дата создания: " Style="{StaticResource MainTextBlockOutputArticlesPage}"/>
+                                        <TextBlock Text="{Binding date_create_article, StringFormat=d}" Style="{StaticResource MainTextBlockOutputArticlesPage}"/>
+                                    </DockPanel>
+                                    <DockPanel Margin="5 0">
+                                        <TextBlock Text="Тип: " Style="{StaticResource MainTextBlockOutputArticlesPage}"/>
+                                        <TextBlock Text="{Binding ArticleTypes.name_type}" Style="{StaticResource MainTextBlockOutputArticlesPage}"/>
+                                    </DockPanel>
+                                    <DockPanel HorizontalAlignment="Right">
+                                        <Button x:Name="BtnEditArticle" Style="{StaticResource OutputArticlesPageEDITBtnSetting}" Click="BtnEditArticle_Click">
+                                            <Button.Background>
+                                                <SolidColorBrush Color="White" Opacity="0.5"/>
+                                            </Button.Background>
+                                        </Button>
+                                        <Button x:Name="FullViewArticle" Content="Читать" Style="{StaticResource OutputArticlesPageEDITBtnSetting}" Click="FullViewArticle_Click">
+                                            <Button.Background>
+                                                <SolidColorBrush Color="White" Opacity="0.5"/>
+                                            </Button.Background>
+                                        </Button>
+                                    </DockPanel>
+                                </DockPanel>
+                                <Border BorderBrush="White" BorderThickness="0 0 0 3"/>
+                            </StackPanel>
+                        </DockPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <DockPanel x:Name="PanelControlArticles" Grid.Row="2" Style="{StaticResource PanelControlArticlesSetting}">
+            <Button x:Name="AddBtn" Content="Добавить" Click="AddBtn_Click" Style="{StaticResource PanelControlArticlesButtonSetting}">
+                <Button.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click" Style="{StaticResource PanelControlArticlesButtonSetting}">
+                <Button.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="GenerateReport" Style="{StaticResource PanelControlArticlesButtonSetting}" Content="Отчёт" Click="GenerateReport_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+        </DockPanel>
+    </Grid>
+</Page>

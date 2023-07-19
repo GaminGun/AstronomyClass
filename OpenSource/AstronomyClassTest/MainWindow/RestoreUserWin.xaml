@@ -1,0 +1,86 @@
+﻿<Window x:Class="AstronomyClassTest.RestoreUserWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AstronomyClassTest" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        mc:Ignorable="d" FontSize="22" Background="DarkSlateBlue"
+        Title="Класс Астрономии. Восстановление пароля." Height="450" Width="650">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/main_background.png"/>
+        </Grid.Background>
+        <Border Style="{StaticResource RestoreBorderSetting}" Height="350">
+            <StackPanel>
+                <DockPanel Height="100">
+                    <Image Style="{StaticResource LogoSetting}" Height="80" Margin="10 0"/>
+                    <TextBlock Style="{StaticResource LogoText}" Text="Восстановление пароля">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </DockPanel>
+                <StackPanel Margin="30 0">
+                    <TextBlock Text="Логин:" HorizontalAlignment="Center">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBox x:Name="LoginInputForRestore" KeyDown="LoginInputForRestore_KeyDown">
+                        <TextBox.Background>
+                            <SolidColorBrush Color="White" Opacity="0.5"/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBlock Text="Код восстановления:" HorizontalAlignment="Center">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBox x:Name="CodeInputForRestore" KeyDown="CodeInputForRestore_KeyDown" IsEnabled="False">
+                        <TextBox.Background>
+                            <SolidColorBrush Color="White" Opacity="0.5"/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBlock Text="Новый пароль:" HorizontalAlignment="Center">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <PasswordBox x:Name="NewPassInputForRestore" IsEnabled="False">
+                        <PasswordBox.Background>
+                            <SolidColorBrush Color="White" Opacity="0.5"/>
+                        </PasswordBox.Background>
+                    </PasswordBox>
+                    <DockPanel HorizontalAlignment="Center">
+                        <Button x:Name="EndRestorePassBtn" Click="EndRestorePassBtn_Click" Style="{StaticResource RestorePasswordBtnSetting}">
+                            <Button.Background>
+                                <SolidColorBrush Color="White" Opacity="0.5"/>
+                            </Button.Background>
+                        </Button>
+                        <Image Style="{StaticResource QuestionIconDescriptionSetting}">
+                            <Image.ToolTip>
+                                <TextBlock Text="Нажимайте Enter для поэтапного заполнения данных."/>
+                            </Image.ToolTip>
+                        </Image>
+                    </DockPanel>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

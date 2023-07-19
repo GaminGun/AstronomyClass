@@ -1,0 +1,64 @@
+﻿<Window x:Class="AstronomyClassTest.MainInterfaceOutputWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AstronomyClassTest" WindowStartupLocation="CenterScreen" Closing="Window_Closing"
+        mc:Ignorable="d" Background="DarkSlateBlue" FontSize="24" SizeChanged="Window_SizeChanged"
+        Title="Класс Астрономии. Главная." Width="1000" Height="600" MinWidth="1000" MinHeight="600">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/main_background.png" Stretch="None"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="MainBlockUserInfo" Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Style="{StaticResource MainBorderWinSetting}">
+            <DockPanel>
+                <Image Style="{StaticResource LogoSetting}" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="TextLogo" Style="{StaticResource LogoText}" FontSize="20">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush>
+                            <GradientStop Color="Yellow" Offset="0.0" />
+                            <GradientStop Color="Red" Offset="1.0" />
+                            <GradientStop Color="LightPink" Offset="0.60" />
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <ListView x:Name="UserLoginShortInfo" Style="{StaticResource ListViewInfoUserSetting}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid MouseDown="UserLoginShortInfo_MouseDown">
+                                <DockPanel Margin="0 0 20 0">
+                                    <TextBlock Text="{Binding login}" Style="{StaticResource UserLoginOutputForInterfaceSetting}"/>
+                                    <Border Style="{StaticResource BorderUserLoginInfoSetting}">
+                                        <Border.OpacityMask>
+                                            <VisualBrush>
+                                                <VisualBrush.Visual>
+                                                    <Border CornerRadius="1" Width="1" Height="1" Background="White"/>
+                                                </VisualBrush.Visual>
+                                            </VisualBrush>
+                                        </Border.OpacityMask>
+                                        <Image Stretch="UniformToFill">
+                                            <Image.Source>
+                                                <Binding Path="user_avatar">
+                                                    <Binding.TargetNullValue>
+                                                        <ImageSource>/Resources/main_background.png</ImageSource>
+                                                    </Binding.TargetNullValue>
+                                                </Binding>
+                                            </Image.Source>
+                                        </Image>
+                                    </Border>
+                                </DockPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </DockPanel>
+        </Border>
+        <Border Grid.Row="1" Style="{StaticResource MainBorderOutputWinSetting}">
+            <Frame x:Name="MainFrame" Style="{StaticResource InterfaceFrameSetting}"/>
+        </Border>
+    </Grid>
+</Window>

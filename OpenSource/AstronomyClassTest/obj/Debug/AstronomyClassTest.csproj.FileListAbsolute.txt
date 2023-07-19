@@ -1,0 +1,63 @@
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.csproj.SuggestedBindingRedirects.cache
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\App.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest_Content.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest_MarkupCompile.cache
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest_MarkupCompile.lref
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\bin\Debug\AstronomyClassTest.exe.config
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\bin\Debug\AstronomyClassTest.exe
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\bin\Debug\AstronomyClassTest.pdb
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\bin\Debug\EntityFramework.dll
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\bin\Debug\EntityFramework.xml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\App.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.g.resources
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.Properties.Resources.resources
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.csproj.GenerateResource.cache
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.csproj.CoreCompileInputs.cache
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.csproj.CopyComplete
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.exe
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.pdb
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.csproj.ResolveComReference.cache
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\AddEditArticlePage.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\AddEditQuestionPage.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\AdminWin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\UserPage\EditUser.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\FullViewArticlePage.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\GenerateRestoreCodeWin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\MainInterfaceOutputWin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\OutputArticlesPage.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\OutputQuestionOnPage.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\PassingTest.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\UserPage\ProfileUser.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\RegistrationWin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\RestoreUserWin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\ViewMark_GenerateReport.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\AddEditArticlePage.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\AddEditQuestionPage.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\AdminWin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\UserPage\EditUser.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\FullViewArticlePage.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\GenerateRestoreCodeWin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\MainInterfaceOutputWin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\OutputArticlesPage.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\OutputQuestionOnPage.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\PassingTest.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\UserPage\ProfileUser.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\RegistrationWin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow\RestoreUserWin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\Articles and Tests\ViewMark_GenerateReport.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\MainWindow.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\EditArticleTypeAdmin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\EditClassAdmin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\EditRoleAdmin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\EditUserAdmin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\EditArticleTypeAdmin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\EditClassAdmin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\EditRoleAdmin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\EditUserAdmin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\MainAdminWin.g.cs
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AdminEditPage\MainAdminWin.baml
+C:\Users\Игорёк\Desktop\AstronomyClassTest\AstronomyClassTest\obj\Debug\AstronomyClassTest.csproj.AssemblyReference.cache

@@ -1,0 +1,19 @@
+﻿<Window x:Class="AstronomyClassTest.GenerateRestoreCodeWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AstronomyClassTest" FontSize="26" WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d" Background="DarkSlateBlue" ResizeMode="NoResize" WindowStyle="None"
+        Title="Класс Астрономии. Код восстановления." Height="300" Width="480">
+    <Grid>
+        <TextBlock Style="{StaticResource TextAlarmCodeWinSetting}"/>
+        <Rectangle Style="{StaticResource RectangleCodeViewWinSetting}"/>
+        <TextBlock x:Name="ViewCode" Style="{StaticResource TextBlockCodeViewWinSetting}"/>
+        <Button x:Name="SaveCodeUserBtn" Click="SaveCodeUserBtn_Click" Style="{StaticResource ButtonCodeSaveUserSetting}">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

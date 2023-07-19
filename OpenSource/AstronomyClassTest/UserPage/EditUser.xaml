@@ -1,0 +1,71 @@
+﻿<Page x:Class="AstronomyClassTest.EditUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AstronomyClassTest"
+      mc:Ignorable="d" FontSize="20"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditUser">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="GoBackBtn" Style="{StaticResource ProfileUserGoBackBtnPageSetting}" Content="Отмена" Grid.Row="0" Click="GoBackBtn_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <StackPanel Grid.Row="1">
+            <DockPanel Margin="5">
+                <TextBlock Text="Текущий пароль:" Style="{StaticResource TextBlockEditUserPageWidthSetting}"/>
+                <PasswordBox x:Name="OldPasswordInput"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Новый пароль:" Style="{StaticResource TextBlockEditUserPageWidthSetting}"/>
+                <PasswordBox x:Name="NewPasswordInput"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Фамилия:" Style="{StaticResource TextBlockEditUserPageWidthSetting}"/>
+                <TextBox Text="{Binding last_name}" x:Name="LastNameInput"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Имя:" Style="{StaticResource TextBlockEditUserPageWidthSetting}"/>
+                <TextBox Text="{Binding first_name}" x:Name="FirstNameInput"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Отчество:" Style="{StaticResource TextBlockEditUserPageWidthSetting}"/>
+                <TextBox Text="{Binding surname}" x:Name="SurnameInput"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Номер телефона:" Style="{StaticResource TextBlockEditUserPageWidthSetting}"/>
+                <TextBox Text="{Binding number_phone}" x:Name="NumberPhone"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Учебное заведение:" Style="{StaticResource TextBlockEditUserPageWidthSetting}"/>
+                <TextBox Text="{Binding educational_institution}" x:Name="EducationalInput"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Класс:" Style="{StaticResource TextBlockEditUserPageWidthSetting}"/>
+                <ComboBox x:Name="SelectedClassForUser" SelectedItem="{Binding Classes}" DisplayMemberPath="name_class"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="Дата рождения:" Style="{StaticResource TextBlockEditUserPageWidthSetting}"/>
+                <DatePicker SelectedDate="{Binding date_birthday}"/>
+            </DockPanel>
+            <Button x:Name="UploadAvatarUser" Style="{StaticResource LoadUserAvatarBtnSetting}" Click="UploadAvatarUser_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <Button x:Name="SaveUserProfileBtn" Style="{StaticResource ProfileUserEditUserBtnSetting}" Content="Сохранить" Grid.Row="2" Click="SaveUserProfileBtn_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>

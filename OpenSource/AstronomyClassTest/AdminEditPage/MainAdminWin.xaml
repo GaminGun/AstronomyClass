@@ -1,0 +1,180 @@
+﻿<Page x:Class="AstronomyClassTest.MainAdminWin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AstronomyClassTest"
+      mc:Ignorable="d" FontSize="20" IsVisibleChanged="Page_IsVisibleChanged"
+      d:DesignHeight="550" d:DesignWidth="1000"
+      Title="MainAdminWin">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TabControl x:Name="TabControlMain"  Margin="10">
+            <TabItem Header="Роли">
+                <DataGrid x:Name="RolesGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Номер роли" Binding="{Binding id}"/>
+                        <DataGridTextColumn Header="Название роли" Binding="{Binding name_role}"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Редактировать" Click="EditRoles_Click"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="Классы">
+                <DataGrid x:Name="ClassesGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Номер класса" Binding="{Binding id}"/>
+                        <DataGridTextColumn Header="Название класса" Binding="{Binding name_class}"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Редактировать" Click="EditClasses_Click"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="Пользователи">
+                <DataGrid x:Name="UsersGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Номер пользователя" Binding="{Binding id}"/>
+                        <DataGridTextColumn Header="Логин" Binding="{Binding login}"/>
+                        <DataGridTextColumn Header="Пароль" Binding="{Binding password}"/>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding last_name}"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding first_name}"/>
+                        <DataGridTextColumn Header="Отчество" Binding="{Binding surname}"/>
+                        <DataGridTextColumn Header="Дата рождения" Binding="{Binding date_birthday, StringFormat=d}"/>
+                        <DataGridTextColumn Header="Номер телефона" Binding="{Binding number_phone}"/>
+                        <DataGridTextColumn Header="Учебное учреждение" Binding="{Binding educational_institution}"/>
+                        <DataGridTextColumn Header="Класс" Binding="{Binding Classes.name_class}"/>
+                        <DataGridTextColumn Header="Роль" Binding="{Binding Roles.name_role}"/>
+                        <DataGridTextColumn Header="Byte-аватар" Binding="{Binding user_avatar}"/>
+                        <DataGridTextColumn Header="Код восстановления" Binding="{Binding restore_code}"/>
+                        <DataGridTextColumn Header="Доступ к системе" Binding="{Binding active}"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Редактировать" Click="EditUsers_Click"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                    <DataGrid.ItemContainerStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="White"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding active}" Value="False">
+                                    <Setter Property="Background" Value="Red"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding active}" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.ItemContainerStyle>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="Типы объектов">
+                <DataGrid x:Name="TypesGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Номер класса" Binding="{Binding id}"/>
+                        <DataGridTextColumn Header="Название класса" Binding="{Binding name_type}"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Редактировать" Click="EditArticleTypes_Click"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="Статьи">
+                <DataGrid x:Name="ArticlesGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Номер статьи" Binding="{Binding id}"/>
+                        <DataGridTextColumn Header="Логин создателя" Binding="{Binding Users.login}"/>
+                        <DataGridTextColumn Header="Название статьи" Binding="{Binding name_article}"/>
+                        <DataGridTextColumn Header="Номер типа" Binding="{Binding ArticleTypes.name_type}"/>
+                        <DataGridTextColumn Header="Масса" Binding="{Binding weight}"/>
+                        <DataGridTextColumn Header="Размер" Binding="{Binding size}"/>
+                        <DataGridTextColumn Header="Дистанция от Земли" Binding="{Binding distance}"/>
+                        <DataGridTextColumn Header="Описание" Binding="{Binding description}"/>
+                        <DataGridTextColumn Header="Текст статьи" Binding="{Binding text_article}"/>
+                        <DataGridTextColumn Header="Дата создания" Binding="{Binding date_create_article, StringFormat=d}"/>
+                        <DataGridTextColumn Header="Byte-изображение" Binding="{Binding image}"/>
+                        <DataGridTextColumn Header="Видна пользователям" Binding="{Binding active}"/>
+                    </DataGrid.Columns>
+                    <DataGrid.ItemContainerStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="White"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding active}" Value="False">
+                                    <Setter Property="Background" Value="Red"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding active}" Value="True">
+                                    <Setter Property="Background" Value="White"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.ItemContainerStyle>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="Тесты">
+                <DataGrid x:Name="TestsGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Номер теста" Binding="{Binding id}"/>
+                        <DataGridTextColumn Header="Статья" Binding="{Binding Articles.name_article}"/>
+                        <DataGridTextColumn Header="Время тестирования (мин)" Binding="{Binding time}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="Вопросы">
+                <DataGrid x:Name="QuestionsGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Номер вопроса" Binding="{Binding id}"/>
+                        <DataGridTextColumn Header="Тест" Binding="{Binding Tests.Articles.name_article}"/>
+                        <DataGridTextColumn Header="Вопрос" Binding="{Binding question}"/>
+                        <DataGridTextColumn Header="Ответ 1" Binding="{Binding answer_1}"/>
+                        <DataGridTextColumn Header="Ответ 2" Binding="{Binding answer_2}"/>
+                        <DataGridTextColumn Header="Ответ 3" Binding="{Binding answer_3}"/>
+                        <DataGridTextColumn Header="Ответ 4" Binding="{Binding answer_4}"/>
+                        <DataGridTextColumn Header="Номер правильного ответа" Binding="{Binding true_answer}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="Оценки">
+                <DataGrid x:Name="MarksGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Логин студента" Binding="{Binding Users.login}"/>
+                        <DataGridTextColumn Header="Статья" Binding="{Binding Tests.Articles.name_article}"/>
+                        <DataGridTextColumn Header="Оценка" Binding="{Binding mark}"/>
+                        <DataGridTextColumn Header="Дата прохождения" Binding="{Binding finish_date, StringFormat=d}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+        <DockPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="DeleteBtn" Content="Удалить" Margin="10 0" Width="150" Click="DeleteBtn_Click"/>
+            <Button x:Name="AddBtn" Content="Добавить" Margin="10 0" Width="150" Click="AddBtn_Click"/>
+            <Button x:Name="EditActiveBtn" Content="Edit Active" Margin="10 0" Width="150" Click="EditActiveBtn_Click"/>
+        </DockPanel>
+    </Grid>
+</Page>

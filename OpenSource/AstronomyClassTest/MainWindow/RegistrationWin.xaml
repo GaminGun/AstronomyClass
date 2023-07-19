@@ -1,0 +1,127 @@
+﻿<Window x:Class="AstronomyClassTest.RegistrationWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AstronomyClassTest" Background="DarkSlateBlue" FontSize="26"
+        mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Title="Класс Астрономии. Регистрация." Width="900" Height="600">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/main_background.png" Stretch="None"/>
+        </Grid.Background>
+        <StackPanel Style="{StaticResource MainBlockSetting}">
+            <DockPanel Height="100">
+                <Image Style="{StaticResource LogoSetting}"/>
+                <TextBlock Style="{StaticResource LogoText}" Text="Регистрация">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush>
+                            <GradientStop Color="Yellow" Offset="0.0" />
+                            <GradientStop Color="Red" Offset="1.0" />
+                            <GradientStop Color="LightPink" Offset="0.60" />
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </DockPanel>
+            <StackPanel Style="{StaticResource BlockInputInfoSetting}">
+                <DockPanel Margin="5">
+                    <TextBlock Text="Логин:" Style="{StaticResource MainTextBlockSizeSetting}">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBox x:Name="LoginInput">
+                        <TextBox.Background>
+                            <SolidColorBrush Color="White" Opacity="0.5"/>
+                        </TextBox.Background>
+                    </TextBox>
+                </DockPanel>
+                <DockPanel Margin="5">
+                    <TextBlock Text="Пароль:" Style="{StaticResource MainTextBlockSizeSetting}">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <PasswordBox x:Name="PasswordInput">
+                        <PasswordBox.Background>
+                            <SolidColorBrush Color="White" Opacity="0.5"/>
+                        </PasswordBox.Background>
+                    </PasswordBox>
+                </DockPanel>
+                <DockPanel Margin="5">
+                    <TextBlock Text="Телефон:" Style="{StaticResource MainTextBlockSizeSetting}">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBox x:Name="NumberPhone" PreviewTextInput="NumberPhone_PreviewTextInput">
+                        <TextBox.Background>
+                            <SolidColorBrush Color="White" Opacity="0.5"/>
+                        </TextBox.Background>
+                    </TextBox>
+                </DockPanel>
+                <DockPanel Margin="5">
+                    <TextBlock Text="ФИО:" Style="{StaticResource MainTextBlockSizeSetting}">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBox x:Name="FullNameInput">
+                        <TextBox.Background>
+                            <SolidColorBrush Color="White" Opacity="0.5"/>
+                        </TextBox.Background>
+                    </TextBox>
+                </DockPanel>
+                <DockPanel Margin="5">
+                    <TextBlock Text="Школа:" Style="{StaticResource MainTextBlockSizeSetting}">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBox x:Name="EducationalInput" GotFocus="EducationalInput_GotFocus" LostFocus="EducationalInput_LostFocus">
+                        <TextBox.Background>
+                            <SolidColorBrush Color="White" Opacity="0.5"/>
+                        </TextBox.Background>
+                    </TextBox>
+                </DockPanel>
+                <DockPanel Margin="5">
+                    <TextBlock Text="Класс:" Style="{StaticResource MainTextBlockSizeSetting}">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Yellow" Offset="0.0" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                                <GradientStop Color="LightPink" Offset="0.60" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <ComboBox x:Name="ClassSelect" DisplayMemberPath="name_class" Width="280"/>
+                </DockPanel>
+                <Button x:Name="RegistrationBtn" Click="RegistrationBtn_Click" Style="{StaticResource MainRegisBtnSetting}">
+                    <Button.Background>
+                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

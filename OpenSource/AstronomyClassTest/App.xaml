@@ -1,0 +1,288 @@
+﻿<Application x:Class="AstronomyClassTest.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AstronomyClassTest"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- RestorePasswordWin -->
+        <Style x:Key="RestoreBorderSetting" TargetType="Border">
+            <Setter Property="Background" Value="DarkSlateBlue"/>
+            <Setter Property="Margin" Value="70 0"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="3"/>
+        </Style>
+        <Style x:Key="RestorePasswordBtnSetting" TargetType="Button">
+            <Setter Property="Content" Value="Восстановить"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="33.2"/>
+        </Style>
+        <Style x:Key="QuestionIconDescriptionSetting" TargetType="Image">
+            <Setter Property="Source" Value="/Resources/QuestionIcon.png"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="34"/>
+        </Style>
+
+        <!-- GENERATE RESTORATION CODE WIN-->
+        <Style x:Key="TextAlarmCodeWinSetting" TargetType="TextBlock">
+            <Setter Property="Text" Value="Запишите сгенерированный код, он поможет восстановить ваш пароль, если это понадобится."/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style x:Key="RectangleCodeViewWinSetting" TargetType="Rectangle">
+            <Setter Property="Fill" Value="Gray"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0 50 0 0"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Width" Value="380"/>
+        </Style>
+        <Style x:Key="TextBlockCodeViewWinSetting" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0 50 0 0"/>
+            <Setter Property="FontSize" Value="90"/>
+        </Style>
+        <Style x:Key="ButtonCodeSaveUserSetting" TargetType="Button">
+            <Setter Property="Content" Value="OK"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="0 0 0 10"/>
+        </Style>
+
+        <!-- MAIN BLOCK -->
+        <Style x:Key="MainBlockSetting" TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0 0 110 0"/>
+        </Style>
+        <Style x:Key="BlockInputInfoSetting" TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="400"/>
+        </Style>
+        <Style x:Key="MainTextBlockSizeSetting" TargetType="TextBlock">
+            <Setter Property="Width" Value="110"/>
+        </Style>
+        <Style x:Key="EnterBtnSetting" TargetType="Button">
+            <Setter Property="Content" Value="Вход"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="180"/>
+            <Setter Property="IsDefault" Value="True"/>
+        </Style>
+        <Style x:Key="RestorePasswordSetting" TargetType="TextBlock">
+            <Setter Property="Text" Value="Забыли пароль?"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="MainRegisBtnSetting" TargetType="Button">
+            <Setter Property="Content" Value="Регистрация"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style x:Key="DockPanel_SelectRoleSetting" TargetType="DockPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0 5"/>
+        </Style>
+        <Style x:Key="RadioButton_SelectRoleSetting" TargetType="RadioButton">
+            <Setter Property="GroupName" Value="SelectRole"/>
+            <Setter Property="Margin" Value="10 0"/>
+        </Style>
+
+
+        <Style x:Key="RadioButton_SelectAnswer" TargetType="RadioButton">
+            <Setter Property="GroupName" Value="Questions"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style x:Key="ButtonAnViewMarkPage_GenerateReportSetting" TargetType="Button">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Content" Value="Отчёт"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="TextBoxForInputTimeForTestSetting" TargetType="TextBox">
+            <Setter Property="Margin" Value="10 5"/>
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Height" Value="60"/>
+        </Style>
+
+        <Style x:Key="MainTextBlockUserProfileSetting" TargetType="TextBlock">
+            <Setter Property="Margin" Value="5 0"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="QuestionTextBlockSetting" TargetType="TextBox">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="AcceptsReturn" Value="True"/>
+            <Setter Property="Height" Value="100"/>
+        </Style>
+        <Style x:Key="TrueAnswerFieldSetting" TargetType="TextBox">
+            <Setter Property="MaxLength" Value="1"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Width" Value="40"/>
+        </Style>
+        <Style x:Key="CheckBoxAdditionalQuestionSetting" TargetType="CheckBox">
+            <Setter Property="Content" Value="Дополнительные ответы"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="MainButtonInAddQuestionPage" TargetType="Button">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="10 5"/>
+        </Style>
+
+        <!-- MAIN WIN SETTING -->
+        <Style x:Key="MainBorderWinSetting" TargetType="Border">
+            <Setter Property="Margin" Value="130 0"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="3 0 3 3"/>
+            <Setter Property="Background" Value="DarkSlateBlue"/>
+        </Style>
+        <Style x:Key="ListViewInfoUserSetting" TargetType="ListView">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Background" Value="DarkSlateBlue"/>
+            <Setter Property="BorderBrush" Value="DarkSlateBlue"/>
+        </Style>
+        <Style x:Key="MainBorderOutputWinSetting" TargetType="Border">
+            <Setter Property="Margin" Value="130 0"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="3 0"/>
+        </Style>
+
+        <Style x:Key="BorderUserLoginInfoSetting" TargetType="Border">
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="60"/>
+        </Style>
+        <Style x:Key="UserLoginOutputForInterfaceSetting" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10 0"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style x:Key="BorderUserLoginInfo_Inside_Setting" TargetType="Border">
+            <Setter Property="CornerRadius" Value="1"/>
+            <Setter Property="Width" Value="1"/>
+            <Setter Property="Height" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <Style x:Key="NameArticleOutput" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style x:Key="MainTextArticleOutput" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="1200"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Justify"/>
+        </Style>
+        <Style x:Key="ButtonInPageOutputArticle" TargetType="Button">
+            <Setter Property="Width" Value="125"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5 10"/>
+        </Style>
+
+        <Style x:Key="AddEditPageBtnSetting" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="150"/>
+        </Style>
+
+        <Style x:Key="ProfileUserGoBackBtnPageSetting" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="30 10"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Content" Value="Назад"/>
+        </Style>
+        <Style x:Key="ProfileUserEditUserBtnSetting" TargetType="Button">
+            <Setter Property="Content" Value="Редактировать профиль"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="330"/>
+        </Style>
+        <Style x:Key="ImageUserInInterfaceUserSetting" TargetType="Image">
+            <Setter Property="Stretch" Value="UniformToFill"/>
+            <Setter Property="Height" Value="250"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <Style x:Key="MainTextBlockOutputArticlesPage" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style x:Key="MainTextBlockForNameArticleSetting" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="MainTextBlockForDescriptionArticleSetting" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="1200"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Justify"/>
+            <Setter Property="Margin" Value="10 20"/>
+        </Style>
+        <Style x:Key="OutputArticlesPageEDITBtnSetting" TargetType="Button">
+            <Setter Property="Content" Value="Редактировать"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="5 0"/>
+        </Style>
+        <Style x:Key="PanelControlArticlesSetting" TargetType="DockPanel">
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="PanelControlArticlesButtonSetting" TargetType="Button">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Margin" Value="20 10"/>
+        </Style>
+
+        <Style x:Key="LoadUserAvatarBtnSetting" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Content" Value="Загрузить аватар"/>
+        </Style>
+        <Style x:Key="TextBlockEditUserPageWidthSetting" TargetType="TextBlock">
+            <Setter Property="Width" Value="210"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="QuestionOutputFieldSetting" TargetType="TextBlock">
+            <Setter Property="MinHeight" Value="200"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <!-- LOGO IMAGE & LOGO TEXT-->
+        <Style x:Key="LogoSetting" TargetType="Image">
+            <Setter Property="Source" Value="/Resources/logo.png"/>
+            <Setter Property="Margin" Value="30 0 10 0"/>
+        </Style>
+        <Style x:Key="TextBlockAddEditPageSetting" TargetType="TextBlock">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style x:Key="LogoText" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Text" Value="Класс Астрономии"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <!-- FRAME SETTING -->
+        <Style x:Key="InterfaceFrameSetting" TargetType="Frame">
+            <Setter Property="NavigationUIVisibility" Value="Hidden"/>
+            <Setter Property="Background" Value="DarkSlateBlue"/>
+        </Style>
+    </Application.Resources>
+</Application>

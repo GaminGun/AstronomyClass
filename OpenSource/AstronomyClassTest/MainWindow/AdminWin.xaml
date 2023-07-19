@@ -1,0 +1,12 @@
+﻿<Window x:Class="AstronomyClassTest.AdminWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AstronomyClassTest"
+        mc:Ignorable="d" Closing="Window_Closing" WindowStartupLocation="CenterScreen"
+        Title="Класс Астрономии. Администратор." Height="550" Width="1000">
+    <Grid>
+        <Frame x:Name="LoadPageInAdminWin" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
